@@ -29,8 +29,13 @@ spec:
         image: strimzici/hello-world-producer:support-training
         imagePullPolicy: IfNotPresent
         env:
+          - name: CA_CRT
+            valueFrom:
+              secretKeyRef:
+                name: my-persistent-cluster-cluster-ca-cert
+                key: ca.crt
           - name: BOOTSTRAP_SERVERS
-            value: my-persistent-cluster-kafka-bootstrap:9092
+            value: my-persistent-cluster-kafka-bootstrap:9093
           - name: TOPIC
             value: my-persistent-topic
           - name: DELAY_MS
@@ -61,8 +66,13 @@ spec:
         image: strimzici/hello-world-consumer:support-training
         imagePullPolicy: IfNotPresent
         env:
+          - name: CA_CRT
+            valueFrom:
+              secretKeyRef:
+                name: my-persistent-cluster-cluster-ca-cert
+                key: ca.crt
           - name: BOOTSTRAP_SERVERS
-            value: my-persistent-cluster-kafka-bootstrap:9092
+            value: my-persistent-cluster-kafka-bootstrap:9093
           - name: TOPIC
             value: my-persistent-topic
           - name: GROUP_ID
