@@ -543,7 +543,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(process_cpu_seconds_total{strimzi_io_name=\"my-cluster-kafka\"}[1m])",
+              "expr": "rate(process_cpu_seconds_total{strimzi_io_name=\"my-persistent-cluster-kafka\"}[1m])",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 2,
@@ -621,7 +621,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum without(area)(jvm_memory_bytes_used{strimzi_io_name=\"my-cluster-kafka\"})",
+              "expr": "sum without(area)(jvm_memory_bytes_used{strimzi_io_name=\"my-persistent-cluster-kafka\"})",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 2,
@@ -699,7 +699,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum without(gc)(rate(jvm_gc_collection_seconds_sum{strimzi_io_name=\"my-cluster-kafka\"}[5m]))",
+              "expr": "sum without(gc)(rate(jvm_gc_collection_seconds_sum{strimzi_io_name=\"my-persistent-cluster-kafka\"}[5m]))",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 2,
@@ -1643,7 +1643,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(process_cpu_seconds_total{strimzi_io_name=\"my-cluster-zookeeper\"}[1m])",
+              "expr": "rate(process_cpu_seconds_total{strimzi_io_name=\"my-persistent-cluster-zookeeper\"}[1m])",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 2,
@@ -1721,7 +1721,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum without(area)(jvm_memory_bytes_used{strimzi_io_name=\"my-cluster-zookeeper\"})",
+              "expr": "sum without(area)(jvm_memory_bytes_used{strimzi_io_name=\"my-persistent-cluster-zookeeper\"})",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 2,
@@ -1799,7 +1799,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum without(gc)(rate(jvm_gc_collection_seconds_sum{strimzi_io_name=\"my-cluster-zookeeper\"}[5m]))",
+              "expr": "sum without(gc)(rate(jvm_gc_collection_seconds_sum{strimzi_io_name=\"my-persistent-cluster-zookeeper\"}[5m]))",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 2,
