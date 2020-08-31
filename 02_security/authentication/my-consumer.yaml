@@ -5,8 +5,10 @@ metadata:
   labels:
     strimzi.io/cluster: my-persistent-cluster
 spec:
+  # Enable TLS authn
   authentication:
     type: tls
+  # Enable ACL rights needed consuming messages (simple authz)
   authorization:
     type: simple
     acls:
