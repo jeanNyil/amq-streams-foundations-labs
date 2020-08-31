@@ -3,7 +3,7 @@ kind: KafkaUser
 metadata:
   name: my-producer
   labels:
-    strimzi.io/cluster: my-cluster
+    strimzi.io/cluster: my-persistent-cluster
 spec:
   authentication:
     type: tls
@@ -12,9 +12,9 @@ spec:
     acls:
       - resource:
           type: topic
-          name: my-topic
+          name: my-persistent-topic
         operation: Write
       - resource:
           type: topic
-          name: my-topic
+          name: my-persistent-topic
         operation: Describe

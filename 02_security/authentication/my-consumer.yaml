@@ -3,7 +3,7 @@ kind: KafkaUser
 metadata:
   name: my-consumer
   labels:
-    strimzi.io/cluster: my-cluster
+    strimzi.io/cluster: my-persistent-cluster
 spec:
   authentication:
     type: tls
@@ -12,11 +12,11 @@ spec:
     acls:
       - resource:
           type: topic
-          name: my-topic
+          name: my-persistent-topic
         operation: Read
       - resource:
           type: topic
-          name: my-topic
+          name: my-persistent-topic
         operation: Describe
       - resource:
           type: group
